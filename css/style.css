@@ -1089,6 +1089,26 @@ a:focus {
   color: white;
 }
 
+/* Base styles for the map on all devices */
+.info_map {
+  width: 100%; /* Full width on smaller screens */
+  height: 200px; /* Fixed height */
+  border: none; /* Clean look without border */
+  display: block; /* Ensures the map is a block-level element */
+}
+
+/* Enhanced media query for desktop screens */
+@media (min-width: 768px) {
+  .info_map {
+    width: 600px; /* Fixed width on larger screens */
+    height: 200px; /* Maintains consistent height */
+    margin-left: auto; /* Centers the map horizontally */
+    margin-right: auto; /* Centers the map horizontally */
+  }
+}
+
+
+
 
 
 /* 
