@@ -39,3 +39,26 @@ function closeModal() {
 function openModal() {
     document.getElementById('buyNowModal').style.display = 'block';
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const jewelBox = document.getElementById('jewelBox');
+    const jootiBox = document.getElementById('jootiBox');
+    const fabricBox = document.getElementById('fabricBox');
+  
+    jewelBox.addEventListener('click', function() {
+      window.location.href = jewelBox.querySelector('a').href;
+    });
+    jootiBox.addEventListener('click', function() {
+      window.location.href = jootiBox.querySelector('a').href;
+    });
+    fabricBox.addEventListener('click', function() {
+      window.location.href = fabricBox.querySelector('a').href;
+    });
+  
+    // Preventing redirection when clicking on 'Shop Now' links directly
+    document.querySelectorAll('.box a').forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+    });
+  });

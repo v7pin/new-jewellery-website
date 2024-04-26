@@ -388,7 +388,7 @@ a:focus {
 
 .shop_section .box .img-box img {
   max-width: 100%;
-  max-height: 145px;
+  max-height: 180px;
 }
 
 .shop_section .box .detail-box {
@@ -799,7 +799,7 @@ a:focus {
   height: 50px;
   padding-left: 15px;
   outline: none;
-  color: #ffffff;
+  color: black;
   border: none;
   border-bottom: 1px solid #fd9c6b;
 }
@@ -1026,10 +1026,21 @@ a:focus {
   color: #333333; /* Dark grey text for heading */
   font-family: 'Noto Sans', sans-serif; /* Stylish, modern sans-serif font */
   text-align: center; /* Centered text */
-  margin-bottom: 15px; /* Bottom margin for spacing */
+  margin-bottom: 10px; /* Bottom margin for spacing */
   font-size: 30px;
   font-weight: 800;
 }
+
+#modalShopName{
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 1px;
+  font-family: "Open Sans", sans-serif;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 10px;
+  
+}   
 
 /* Modal Body Text */
 .modal p {
@@ -1038,12 +1049,29 @@ a:focus {
   color: #555555; /* Medium grey text */
   font-size: 16px; /* Readable font size */
   line-height: 1.5;
-  margin-top: 8px;
+  margin-top: 6px;
    /* Adequate line height for readability */
 }
 
+
+
+#modalShopAddress {
+  color: #007bff; /* Medium grey text */
+  font-size: 16px; /* Readable font size */
+  line-height: 1.5;
+  margin-top: 8px;
+
+}
+
+#modalShopAddress:hover {
+  text-decoration: none;
+  color: #094c94;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
 /* Links within the Modal */
-.modal a {
+#modalPhoneNumber  {
   background-color: #007bff; /* Blue, can adjust to fit brand color */
   color: white; /* White text */
   padding: 10px 20px; /* Padding for aesthetic spacing */
@@ -1056,7 +1084,7 @@ a:focus {
   font-family: 'Open Sans', sans-serif;
   }
 
-.modal a:hover {
+#modalPhoneNumber:hover {
   background-color: #0056b3; /* Slightly darker blue on hover */
 }
 
@@ -1105,6 +1133,20 @@ a:focus {
     margin-left: auto; /* Centers the map horizontally */
     margin-right: auto; /* Centers the map horizontally */
   }
+}
+
+/* Make cursor pointer for the entire box areas */
+#jewelBox, #jootiBox, #fabricBox {
+  cursor: pointer;
+}
+
+/* Specifically target images for cursor change */
+#jewelBox img, #jootiBox img, #fabricBox img {
+  cursor: pointer;
+}
+
+.hoverImg{
+  cursor: pointer;/* Smooth transition for the transform */ 
 }
 
 
