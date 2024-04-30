@@ -372,6 +372,14 @@ a:focus {
   position: relative;
   padding: 10px;
   margin-top: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Full width for better responsiveness */
+  margin: 10px 0; /* Space between boxes */
+
 }
 
 .shop_section .box a {
@@ -389,14 +397,13 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
   padding: 15px 30px;
-  height: 245px;
+  height: 330px;
 }
 
 .shop_section .box .img-box img {
   max-width: 100%;
-  max-height: 180px;
+  max-height: 300px;
 }
-
 
 .shop_section .box .detail-box {
   display: -webkit-box;
@@ -465,6 +472,34 @@ a:focus {
   text-decoration: none; /* Removes underline from the link */
 }
 
+@media (max-width: 768px) {
+  .box {
+    width: 90%; /* Slightly smaller width on small devices for margin */
+    margin: 20px auto; /* Center and add vertical spacing */
+  }
+
+  .img-box {
+    height: 280px; /* Fixed height for uniformity */
+  }
+
+  .img-box img {
+    min-height: 120px; /* Fixed height for uniformity */
+  }
+}
+
+/* Detail box styling */
+
+/* Ensuring that the 'NEW' badge is consistently positioned */
+
+
+/* Ensure buttons and links are centrally aligned and visible */
+
+
+
+
+/* Adding hover effects for interactive elements */
+
+
 .about_section .row {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -529,7 +564,7 @@ a:focus {
   margin: 10px;
   height: 100%;
   position: relative;
-  min-height: 165px;
+  min-height: 205px;
 }
 
 .offer_section .box img {
@@ -1285,7 +1320,6 @@ a:focus {
     flex: 0 0 100%; /* Each card takes full width of the viewport */
     width: 100vw; /* Card width is 100% of viewport width */
     scroll-snap-align: center; /* Ensures the card snaps to the center */
-    height: 50vh;
   }
 
   .pre-btn {
@@ -1294,131 +1328,7 @@ a:focus {
   .nxt-btn {
     right: -10px;
   } /* Half the button's width to the outside of the container */
-
-
-
-
 }
-
-
-.jewel-offer_section .row > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-  .jewel-offer_section .row > div {
-    flex-basis: 33.333%; /* Adjust to change the width of the columns */
-    max-width: 33.333%; /* Adjust to change the width of the columns */
-  }
-}
-
-.jewel-offer_section .box {
-  margin: 10px;
-  height: 100%;
-  position: relative;
-  min-height: 165px;
-  box-shadow: none; /* Add this line if there's a box-shadow you want to remove */
-  border: none; /* Add this line if there's a border you want to remove */
-}
-
-.jewel-offer_section .box img {
-  width: 100%;
-  min-height: 100%;
-  transition: transform 0.6s ease;
-}
-
-.jewel-offer_section .box:hover img {
-  transform: scale(1.05);
-}
-
-.jewel-offer_section .box .detail-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  color: #ffffff;
-  padding: 25px;
-  background-color: rgba(0, 0, 0, 0.15);
-}
-
-.jewel-offer_section .box .detail-box h2 {
-  font-weight: bold;
-}
-
-.jewel-offer_section .box .detail-box a {
-  display: inline-block;
-  padding: 8px 40px;
-  background-color: transparent;
-  color: #fd9c6b;
-  border-radius: 0;
-  border: 1px solid #fd9c6b;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  margin-top: 10px;
-}
-
-.jewel-offer_section .box .detail-box a:hover {
-  background-color: #fd9c6b;
-  color: #ffffff;
-}
-
-.jewel-offer_section .box.offer-box1 {
-  min-height: 10rem;
-}
-
-.jewel-offer_section .box.offer-box1 .detail-box {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
-
-.jewel-offer_section .box.offer-box1 .detail-box h2 {
-  font-size: 3rem;
-}
-
-.jewel-offer_section .box.offer-box2 .detail-box h2,
-.jewel-offer_section .box.offer-box3 .detail-box h2 {
-  font-size: 2rem;
-}
-
-.jewel-offer_section .box.offer-box2 .detail-box {
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.jewel-offer_section .box.offer-box3 .detail-box {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
 
 .jewelry-container {
   display: flex;
@@ -1429,7 +1339,7 @@ a:focus {
 
 .jewelry-container .detail-box {
   position: absolute;
-   color: #ffffff;
+  color: #ffffff;
   padding: 25px;
   text-align: left;
   transition: all 0.3s ease;
@@ -1451,22 +1361,22 @@ a:focus {
   right: 2px;
 }
 
-.jewelry-container .left-side .detail-box  h2 {
-  font-family: 'Playfair Display', serif;
+.jewelry-container .left-side .detail-box h2 {
+  font-family: "Playfair Display", serif;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 2rem;
 }
 
-.jewelry-container .right-side .detail-box  h2 {
-  font-family: 'Playfair Display', serif;
+.jewelry-container .right-side .detail-box h2 {
+  font-family: "Playfair Display", serif;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 4rem;
 }
 
 .jewelry-container .detail-box a {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: transparent;
   color: #ffffff;
   padding: 8px 40px;
@@ -1487,23 +1397,49 @@ a:focus {
   .jewelry-container {
     flex-direction: column;
   }
+
+  
   .left-side, .right-side {
     width: 100%;
     height: auto;
   }
 
+  .jewelry-image:first-child .detail-box {
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .jewelry-image:nth-child(2) .detail-box {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .right-side .detail-box {
+    bottom: 10px;
+    left: 10px;
+    
+  }
+
+  .jewelry-container .right-side img{
+    max-height: 305px;
+  }
+
+ .jewelry-container .left-side .left-text .detail-box {
+ text-align: right; ;
+ }
+
 .jewelry-container .left-side .detail-box  h2 {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .jewelry-container .right-side .detail-box  h2 {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .jewelry-container .detail-box a {
@@ -1517,10 +1453,12 @@ a:focus {
   display: inline-block;
   transition: background-color 0.3s ease;
   font-size: 0.8rem;
+  text-align: center;
 }
 }
 
-.left-side, .right-side {
+.left-side,
+.right-side {
   flex: 1;
 }
 .left-side {
@@ -1539,11 +1477,10 @@ a:focus {
   object-fit: cover;
   display: block;
   transition: transform 0.6s ease;
-
 }
 
 .jewelry-image img:hover {
-  transform: scale(1.01);  /* Optional: Scale up image on hover */
+  transform: scale(1.01); /* Optional: Scale up image on hover */
 }
 
 .overlay-text {
@@ -1552,7 +1489,7 @@ a:focus {
   left: 10px;
   color: white;
   font-size: 24px;
-  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
 }
 .shop-button {
   position: absolute;
