@@ -14,7 +14,6 @@ function openNav() {
 }
 
 
-/** google_map js **/
 
 function myMap() {
     var mapProp = {
@@ -62,3 +61,43 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const productContainer = document.querySelector('.product-container');
+    const nxtBtn = document.querySelector('.nxt-btn');
+    const preBtn = document.querySelector('.pre-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    let autoSlideInterval = 3000; // Interval in milliseconds for automatic sliding
+    let currentIndex = 0;
+  
+    // Click events for navigation buttons
+    nxtBtn.addEventListener('click', () => slideProduct('next'));
+    preBtn.addEventListener('click', () => slideProduct('prev'));
+  
+    function slideProduct(direction) {
+      if (direction === 'next') {
+        if (currentIndex >= productCards.length - 1) {
+          currentIndex = 0; // Reset to the first card
+          productContainer.scrollLeft = 0; // Reset scroll position instantly
+        } else {
+          currentIndex++;
+          productContainer.scrollLeft = currentIndex * (productCards[0].clientWidth + 40); // Assumes 40px gap
+        }
+      } else {
+        if (currentIndex <= 0) {
+          currentIndex = productCards.length - 1; // Move to the last card
+          productContainer.scrollLeft = currentIndex * (productCards[0].clientWidth + 40);
+        } else {
+          currentIndex--;
+          productContainer.scrollLeft = currentIndex * (productCards[0].clientWidth + 40);
+        }
+      }
+    }
+  
+    // Automatic sliding
+    setInterval(() => {
+      slideProduct('next');
+    }, autoSlideInterval);
+  });
+  
+  
